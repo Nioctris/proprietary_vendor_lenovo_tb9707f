@@ -1,0 +1,1231 @@
+#
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+# Blobs for the Lenovo Legion Y700 (TB-9707F), kona / SM8250-AC.
+# Stock images: Lenovo/TB-9707F_PRC/TB-9707F:13/TKQ1.221013.002/15.0.342_231018:user/release-keys
+# (ZUI 15, vendor build 15.0.342_231018, vendor VNDK 30).
+#
+# The base list below is the kona blob list from
+# device/xiaomi/sm8250-common, filtered against the extracted TB-9707F
+# images. Base entries that are not present in those images are kept as
+# "# missing: <path>" comments so the delta stays auditable.
+#
+
+# ADSP
+vendor/bin/adsprpcd
+vendor/etc/init/vendor.qti.adsprpc-service.rc
+vendor/lib/libadsprpc.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+
+# ADSP modules (aptX)
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
+
+# missing: vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
+
+# Audio
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libadm.so
+vendor/lib/libaudcal.so
+vendor/lib/libqtigef.so
+vendor/lib/libssrec.so
+
+# Audio FX modules
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libshoebox.so
+
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbtnv.so
+vendor/lib64/libsoc_helper.so
+
+# Bluetooth (A2DP)
+vendor/lib/btaudio_offload_if.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib/libbluetooth_audio_session_qti.so
+vendor/lib/libbluetooth_audio_session_qti_2_1.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
+
+# Camera motor (sound) - from lmi
+
+# missing: system/media/audio/ui/popup_cangmen_down.ogg
+# missing: system/media/audio/ui/popup_cangmen_up.ogg
+# missing: system/media/audio/ui/popup_chilun_down.ogg
+# missing: system/media/audio/ui/popup_chilun_up.ogg
+# missing: system/media/audio/ui/popup_jijia_down.ogg
+# missing: system/media/audio/ui/popup_jijia_up.ogg
+# missing: system/media/audio/ui/popup_mofa_down.ogg
+# missing: system/media/audio/ui/popup_mofa_up.ogg
+# missing: system/media/audio/ui/popup_muqin_down.ogg
+# missing: system/media/audio/ui/popup_muqin_up.ogg
+# missing: system/media/audio/ui/popup_yingyan_down.ogg
+# missing: system/media/audio/ui/popup_yingyan_up.ogg
+
+# CDSP
+vendor/bin/cdsprpcd
+vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/lib/libcdsprpc.so
+vendor/lib/libfastcrc.so
+vendor/lib/libfastcvdsp_stub.so
+vendor/lib/libfastcvopt.so
+vendor/lib/libmdsprpc.so
+vendor/lib/libsdsprpc.so
+vendor/lib/libsysmon_cdsp_skel.so
+vendor/lib64/libcdfw.so
+vendor/lib64/libcdfw_remote_api.so
+vendor/lib64/libcdsp_default_listener.so
+vendor/lib64/libcdsprpc.so
+vendor/lib64/libfastcvdsp_stub.so
+vendor/lib64/libfastcvopt.so
+vendor/lib64/libmdsprpc.so
+vendor/lib64/libsdsprpc.so
+vendor/lib64/libsysmon_cdsp_skel.so
+
+# missing: vendor/lib64/libcdsprpc_system.so
+
+# CNE
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
+vendor/bin/cnd
+vendor/etc/cne/mwqem.conf
+vendor/etc/cne/profileMwqem.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
+vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
+vendor/etc/init/cnd.rc
+vendor/lib64/libcne.so
+vendor/lib64/libcneapiclient.so
+vendor/lib64/libcneoplookup.so
+vendor/lib64/libcneqmiutils.so
+vendor/lib64/libwms.so
+vendor/lib64/libwqe.so
+vendor/lib64/libxml.so
+vendor/lib64/vendor.qti.data.factory@2.0.so
+vendor/lib64/vendor.qti.data.factory@2.1.so
+vendor/lib64/vendor.qti.data.factory@2.2.so
+vendor/lib64/vendor.qti.data.factory@2.3.so
+vendor/lib64/vendor.qti.data.mwqem@1.0.so
+vendor/lib64/vendor.qti.data.slm@1.0.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
+vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
+vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib64/vendor.qti.hardware.data.lce@1.0.so
+vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
+vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
+vendor/lib64/vendor.qti.latency@2.0.so
+vendor/lib64/vendor.qti.latency@2.1.so
+
+# missing: vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so
+
+# Configstore
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
+vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+
+# Display (HDR)
+vendor/lib64/libhdr_tm.so
+
+# Display (SDM)
+vendor/lib64/libdisplayqos.so
+vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libqseed3.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
+vendor/lib64/libsdm-diag.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libtinyxml2_1.so
+
+# missing: vendor/lib64/libgame_enhance.so
+
+# Display postprocessing
+vendor/bin/hw/vendor.display.color@1.0-service
+vendor/etc/init/vendor.display.color@1.0-service.rc
+vendor/lib64/libdisp-aba.so
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.color@1.1.so
+vendor/lib64/vendor.display.color@1.2.so
+vendor/lib64/vendor.display.color@1.3.so
+vendor/lib64/vendor.display.color@1.4.so
+vendor/lib64/vendor.display.color@1.5.so
+vendor/lib64/vendor.display.postproc@1.0.so
+
+# DPM
+system_ext/bin/dpmd
+system_ext/etc/dpm/dpm.conf
+system_ext/etc/init/dpmd.rc
+system_ext/etc/permissions/com.qti.dpmframework.xml
+system_ext/etc/permissions/dpmapi.xml
+system_ext/framework/com.qti.dpmframework.jar
+system_ext/framework/dpmapi.jar
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/libdpmctmgr.so
+system_ext/lib64/libdpmfdmgr.so
+system_ext/lib64/libdpmframework.so
+system_ext/lib64/libdpmtcm.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
+vendor/bin/dpmQmiMgr
+vendor/etc/init/dpmQmiMgr.rc
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libdpmqmihal.so
+
+# missing: system/framework/tcmclient.jar
+
+# DRM (QSEECom)
+vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
+vendor/bin/qseecomd
+vendor/etc/init/qseecomd.rc
+vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
+vendor/lib64/libGPreqcancel.so
+vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libQSEEComAPI.so
+vendor/lib64/libSecureUILib.so
+vendor/lib64/libStDrvInt.so
+vendor/lib64/libdrmfs.so
+vendor/lib64/libdrmtime.so
+vendor/lib64/libops.so
+vendor/lib64/libqisl.so
+vendor/lib64/librpmb.so
+vendor/lib64/libsecureui.so
+vendor/lib64/libsecureui_svcsock.so
+vendor/lib64/libspl.so
+vendor/lib64/libssd.so
+vendor/lib64/libtzdrmgenprov.so
+vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+
+# DRM (OEM Crypto API)
+vendor/lib64/libcpion.so
+vendor/lib64/libminkdescriptor.so
+vendor/lib64/liboemcrypto.so
+vendor/lib64/libtrustedapploader.so
+
+# DRM (Widevine)
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
+
+# DSP service
+vendor/bin/dspservice
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+vendor/lib/vendor.qti.hardware.dsp@1.0.so
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so
+
+# Embedded Secure Element power manager
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.1.so
+
+# Feature enabler client
+vendor/bin/feature_enabler_client
+vendor/etc/init/feature_enabler_client.rc
+
+# FM
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
+
+# Gatekeeper
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+
+# Graphics (Adreno)
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
+vendor/lib/egl/libq3dtools_esx.so
+vendor/lib/libC2D2.so
+vendor/lib/libCB.so
+vendor/lib/libOpenCL.so
+vendor/lib/libVkLayer_q3dtools.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libc2d30_bltlib.so
+vendor/lib/libgpudataproducer.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-glnext.so
+vendor/lib/libllvm-qcom.so
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
+vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libCB.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libVkLayer_q3dtools.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libc2d30_bltlib.so
+vendor/lib64/libgpudataproducer.so
+vendor/lib64/libgsl.so
+vendor/lib64/libllvm-glnext.so
+vendor/lib64/libllvm-qcom.so
+
+# Graphics (Adreno firmware)
+vendor/firmware/a650_gmu.bin
+vendor/firmware/a650_sqe.fw
+vendor/firmware/a650_zap.b00
+vendor/firmware/a650_zap.b01
+vendor/firmware/a650_zap.b02
+vendor/firmware/a650_zap.elf
+vendor/firmware/a650_zap.mdt
+
+# Graphics (Vulkan)
+vendor/lib/hw/vulkan.adreno.so
+vendor/lib64/hw/vulkan.adreno.so
+
+# GNSS
+vendor/app/CACertService/CACertService.apk
+vendor/bin/lowi-server
+vendor/bin/xtwifi-inet-agent
+vendor/etc/cacert_location.pem
+vendor/etc/xtra_root_cert.pem
+vendor/lib64/libaoa.so
+vendor/lib64/libasn1cper.so
+vendor/lib64/libasn1crt.so
+vendor/lib64/libasn1crtx.so
+vendor/lib64/libcacertclient.so
+vendor/lib64/libdataitems.so
+vendor/lib64/libgps.utils.so
+vendor/lib64/libizat_core.so
+vendor/lib64/libjnihelper.so
+vendor/lib64/libloc_api_v02.so
+vendor/lib64/libloc_core.so
+vendor/lib64/liblocation_api.so
+vendor/lib64/liblowi_client.so
+vendor/lib64/liblowi_wifihal.so
+vendor/lib64/libqcc_file_agent.so
+vendor/lib64/libqdma_file_agent.so
+vendor/lib64/libxtadapter.so
+vendor/lib64/libxtwifi_server_protocol.so
+vendor/lib64/libxtwifi_server_protocol_uri_v3.so
+vendor/lib64/vendor.qti.gnss@1.0.so
+vendor/lib64/vendor.qti.gnss@1.1.so
+vendor/lib64/vendor.qti.gnss@1.2.so
+vendor/lib64/vendor.qti.gnss@2.0.so
+vendor/lib64/vendor.qti.gnss@2.1.so
+vendor/lib64/vendor.qti.gnss@3.0.so
+vendor/lib64/vendor.qti.gnss@4.0.so
+vendor/lib64/vendor.qti.hardware.cacert@1.0.so
+
+# missing: vendor/bin/loc_launcher
+# missing: vendor/bin/xtra-daemon
+# missing: vendor/bin/xtwifi-client
+# missing: vendor/lib64/libgdtap.so
+# missing: vendor/lib64/libizat_client_api.so
+# missing: vendor/lib64/liblbs_core.so
+
+# GNSS configs
+vendor/etc/lowi.conf
+vendor/etc/xtwifi.conf
+
+# missing: vendor/etc/izat.conf
+
+# IMS
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+vendor/bin/ims_rtp_daemon
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
+vendor/bin/imsrcsd
+vendor/etc/init/ims_rtp_daemon.rc
+vendor/etc/init/imsdatadaemon.rc
+vendor/etc/init/imsqmidaemon.rc
+vendor/etc/init/imsrcsd.rc
+vendor/etc/seccomp_policy/imsrtp.policy
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
+vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
+vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
+vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.1.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.2.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.3.so
+vendor/lib64/lib-imscmservice.so
+vendor/lib64/lib-imsdpl.so
+vendor/lib64/lib-imsqimf.so
+vendor/lib64/lib-imsrcs-v2.so
+vendor/lib64/lib-imsrcsbaseimpl.so
+vendor/lib64/lib-imsvtcore.so
+vendor/lib64/lib-imsxml.so
+vendor/lib64/lib-rcsconfig.so
+vendor/lib64/lib-rtpcommon.so
+vendor/lib64/lib-rtpcore.so
+vendor/lib64/lib-rtpsl.so
+vendor/lib64/lib-siputility.so
+vendor/lib64/lib-uceservice.so
+vendor/lib64/librcc.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
+vendor/lib64/vendor.qti.ims.callcapability@1.0.so
+vendor/lib64/vendor.qti.ims.callinfo@1.0.so
+vendor/lib64/vendor.qti.ims.factory@1.0.so
+vendor/lib64/vendor.qti.ims.factory@1.1.so
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
+vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
+vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
+vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
+
+# missing: system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
+# missing: system_ext/priv-app/ims/ims.apk
+
+# IRQ balance
+vendor/bin/msm_irqbalance
+vendor/etc/msm_irqbalance.conf
+
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqtikeymaster4.so
+vendor/lib64/libspcom.so
+
+# missing: vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
+
+# Listen
+vendor/lib/hw/sound_trigger.primary.kona.so
+vendor/lib/libadpcmdec.so
+vendor/lib/libcapiv2svacnn.so
+vendor/lib/libcapiv2svarnn.so
+vendor/lib/libcapiv2vop.so
+vendor/lib/libgcs-calwrapper.so
+vendor/lib/libgcs-ipc.so
+vendor/lib/libgcs-osal.so
+vendor/lib/libgcs.so
+vendor/lib/liblistensoundmodel2.so
+vendor/lib/libmulawdec.so
+vendor/lib/libsmwrapper.so
+
+# Media
+system_ext/lib64/libmmosal.so
+system_ext/lib64/libmmparser_lite.so
+vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor
+
+# Media (Codec2)
+vendor/bin/hw/vendor.qti.media.c2@1.0-service
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
+vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
+vendor/etc/vintf/manifest/c2_manifest_vendor.xml
+vendor/lib/libqcodec2_base.so
+vendor/lib/libqcodec2_basecodec.so
+vendor/lib/libqcodec2_core.so
+vendor/lib/libqcodec2_platform.so
+vendor/lib/libqcodec2_utils.so
+vendor/lib/libqcodec2_v4l2codec.so
+
+# Media configs
+vendor/etc/media_profiles_kona.xml:vendor/etc/media_profiles_V1_0.xml
+
+# Mink-Lowi Interface daemon
+vendor/bin/mlid
+vendor/lib64/libminksocket.so
+
+# Neural networks
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
+vendor/lib64/libhexagon_nn_stub.so
+vendor/lib64/libhta_hexagon_runtime.so
+vendor/lib64/unnhal-acc-adreno.so
+vendor/lib64/unnhal-acc-common.so
+vendor/lib64/unnhal-acc-hta.so
+vendor/lib64/unnhal-acc-hvx.so
+
+# NVRAM
+
+# missing: vendor/bin/nv_mac
+
+# Peripheral manager
+vendor/bin/pm-proxy
+vendor/bin/pm-service
+vendor/lib64/libperipheral_client.so
+
+# Power-off alarm
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
+vendor/bin/power_off_alarm
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+
+# missing: system_ext/app/PowerOffAlarm/PowerOffAlarm.apk
+
+# QCC
+vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
+vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
+
+# QMI
+vendor/bin/irsc_util
+vendor/bin/qmipriod
+vendor/etc/init/qmipriod.rc
+vendor/etc/sec_config
+vendor/lib/libdiag.so
+vendor/lib64/libdiag.so
+vendor/lib64/libdsi_netctrl.so
+vendor/lib64/libdsutils.so
+vendor/lib64/libidl.so
+vendor/lib64/libqcci_legacy.so
+vendor/lib64/libqcmaputils.so
+vendor/lib64/libqdi.so
+vendor/lib64/libqdp.so
+vendor/lib64/libqmi.so
+vendor/lib64/libqmi_cci.so
+vendor/lib64/libqmi_client_helper.so
+vendor/lib64/libqmi_client_qmux.so
+vendor/lib64/libqmi_common_so.so
+vendor/lib64/libqmi_csi.so
+vendor/lib64/libqmi_encdec.so
+vendor/lib64/libqmi_legacy.so
+vendor/lib64/libqmiservices.so
+
+# missing: system/etc/permissions/privapp-permissions-qti.xml
+# missing: system/etc/sysconfig/qti_whitelist.xml
+
+# RIL
+system_ext/etc/permissions/qti_libpermissions.xml
+system_ext/etc/permissions/qti_permissions.xml
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
+vendor/app/IWlanService/IWlanService.apk
+vendor/bin/adpl
+vendor/bin/ks
+vendor/bin/mdm_helper
+vendor/bin/netmgrd
+vendor/bin/pd-mapper
+vendor/bin/port-bridge
+vendor/bin/qrtr-cfg
+vendor/bin/qrtr-lookup
+vendor/bin/qrtr-ns
+vendor/bin/qti
+vendor/bin/rmt_storage
+vendor/bin/shsusrd
+vendor/bin/ssgtzd
+vendor/bin/tftp_server
+vendor/etc/data/dsi_config.xml
+vendor/etc/data/netmgr_config.xml
+vendor/etc/init/dataadpl.rc
+vendor/etc/init/dataqti.rc
+vendor/etc/init/init-qcril-data.rc
+vendor/etc/init/netmgrd.rc
+vendor/etc/init/port-bridge.rc
+vendor/etc/init/shsusrd.rc
+vendor/etc/init/ssgtzd.rc
+vendor/etc/init/vendor.qti.rmt_storage.rc
+vendor/etc/init/vendor.qti.tftp.rc
+vendor/etc/ssg/ta_config.json
+vendor/etc/ssg/tz_whitelist.json
+vendor/lib64/libconfigdb.so
+vendor/lib64/liblqe.so
+vendor/lib64/libmdmdetect.so
+vendor/lib64/libmdmimgload.so
+vendor/lib64/libnetmgr.so
+vendor/lib64/libnetmgr_common.so
+vendor/lib64/libnetmgr_nr_fusion.so
+vendor/lib64/libnetmgr_rmnet_ext.so
+vendor/lib64/libnlnetmgr.so
+vendor/lib64/libpdmapper.so
+vendor/lib64/libpdnotifier.so
+vendor/lib64/libqcbor.so
+vendor/lib64/libqcrildatactl.so
+vendor/lib64/libqrtr.so
+vendor/lib64/libqsocket.so
+vendor/lib64/libsystem_health_mon.so
+vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so
+vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
+
+# missing: system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+# missing: system_ext/etc/permissions/qcrilhook.xml
+# missing: system_ext/framework/qcrilhook.jar
+# missing: system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+# missing: vendor/bin/ATFWD-daemon
+# missing: vendor/bin/hw/qcrild
+# missing: vendor/etc/init/qcrild.rc
+# missing: vendor/etc/seccomp_policy/atfwd@2.0.policy
+# missing: vendor/lib64/deviceInfoServiceModule.so
+# missing: vendor/lib64/libhydra_common.so
+# missing: vendor/lib64/libmodemapi.so
+# missing: vendor/lib64/libqcrilFramework.so
+# missing: vendor/lib64/libril-qc-hal-qmi.so
+# missing: vendor/lib64/libril-qc-logger.so
+# missing: vendor/lib64/libril-qc-ltedirectdisc.so
+# missing: vendor/lib64/libril-qc-radioconfig.so
+# missing: vendor/lib64/librilqmiservices.so
+# missing: vendor/lib64/libsettings.so
+# missing: vendor/lib64/qcrild_librilutils.so
+# missing: vendor/lib64/qtibus.so
+# missing: vendor/lib64/qtimutex.so
+# missing: vendor/radio/qcril_database/qcril.db
+# missing: vendor/radio/qcril_database/upgrade/0_initial.sql
+# missing: vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql
+# missing: vendor/radio/qcril_database/upgrade/1_version_intro.sql
+# missing: vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
+# missing: vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
+# missing: vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql
+# missing: vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
+# missing: vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
+# missing: vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
+# missing: vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
+# missing: vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
+
+# Secure element
+
+# missing: vendor/bin/hw/vendor.qti.secure_element@1.2-service
+# missing: vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
+# missing: vendor/lib64/android.hardware.secure_element@1.0-impl.so
+# missing: vendor/lib64/jcos_nq_client.so
+# missing: vendor/lib64/ls_nq_client.so
+# missing: vendor/lib64/se_nq_extn_client.so
+
+# Snapdragon Computer Vision Engine
+vendor/lib/libscveCommon.so
+vendor/lib/libscveCommon_stub.so
+vendor/lib/libscveObjectSegmentation.so
+vendor/lib/libscveObjectSegmentation_stub.so
+vendor/lib/libscveObjectTracker.so
+vendor/lib/libscveObjectTracker_stub.so
+vendor/lib64/libscveCommon.so
+vendor/lib64/libscveCommon_stub.so
+vendor/lib64/libscveObjectSegmentation.so
+vendor/lib64/libscveObjectSegmentation_stub.so
+vendor/lib64/libscveObjectTracker.so
+vendor/lib64/libscveObjectTracker_stub.so
+
+# Soter
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.soter@1.0.so
+
+# Subsystem Restart
+vendor/bin/ssr_setup
+
+# Thermal
+
+# missing: vendor/bin/mi_thermald
+# missing: vendor/etc/init/init.mi_thermald.rc
+
+# Thermal engine
+vendor/bin/thermal-engine
+vendor/etc/init/init_thermal-engine.rc
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
+
+# Time services
+vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
+vendor/etc/init/init.time_daemon.rc
+vendor/lib64/libtime_genoff.so
+
+# Trusted Execution Environment connector
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
+vendor/lib64/libGPQTEEC_vendor.so
+vendor/lib64/libGPTEE_vendor.so
+vendor/lib64/libQTEEConnector_listener.so
+vendor/lib64/libQTEEConnector_vendor.so
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
+
+# Trusted User Interface
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
+
+# VPP
+vendor/bin/vppservice
+vendor/etc/configstore/vpp.configstore.xml
+vendor/etc/init/vppservice.rc
+vendor/lib/libvppclient.so
+vendor/lib/libvpphcp.so
+vendor/lib/libvpphvx.so
+vendor/lib/libvpplibrary.so
+vendor/lib/vendor.qti.hardware.vpp@1.1.so
+vendor/lib/vendor.qti.hardware.vpp@1.2.so
+vendor/lib/vendor.qti.hardware.vpp@1.3.so
+vendor/lib64/libvppclient.so
+vendor/lib64/libvpphcp.so
+vendor/lib64/libvpphvx.so
+vendor/lib64/libvpplibrary.so
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so
+
+# WiFi
+vendor/bin/cnss-daemon
+vendor/etc/wifi/aoa_cldb_falcon.bin
+vendor/etc/wifi/aoa_cldb_swl14.bin
+
+# WiFi Display (system) - from marvel
+system_ext/bin/wfdservice64|6b738758fe3d21d6d53d3fb522e1321b54592fa9
+system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
+system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|6669d5ee462c981663b8ac573d84d334e4eed96c
+system_ext/etc/seccomp_policy/wfdservice64.policy|1e331272649395423b11c575892e0bdc9433b820
+system_ext/lib64/libmmrtpdecoder.so|51c486b525879c1239062f0fa6b591c3e0abaaa0
+system_ext/lib64/libmmrtpencoder.so|946d85b6b852ee95e17b40b00c4c85ebfa72c85c
+system_ext/lib64/libwfdavenhancements.so|e5a06c6ea07c0cd4ebb73b030b87bf5e51a553e3
+system_ext/lib64/libwfdclient.so|ae443c8657e680558cce30039409cee1e6ab5505
+system_ext/lib64/libwfdcommonutils.so|27c411978b486ccc075862fa2eff450990b9d47a
+system_ext/lib64/libwfdconfigutils.so|d05d03298caf2e233c69689cf1fed0dd19a02be1
+system_ext/lib64/libwfddisplayconfig.so|2717202736b678390be7518ce6f69a63079e4217
+system_ext/lib64/libwfdmminterface.so|b560306dbc7b2bffb734c8eb6439dd3721f75c12
+system_ext/lib64/libwfdmmsink.so|a250fd4085ec04345db8067f11962f57c3b166f0
+system_ext/lib64/libwfdmmsrc_system.so|69e08746a9557ee5fba3e02a8170032db0fa0105
+system_ext/lib64/libwfdnative.so;SYMLINK=system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so|923acb22f26dc3aab5115cf685a161611e43c018
+system_ext/lib64/libwfdrtsp.so|14eec96c4fa615096c473d5a269ba315a53cfd00
+system_ext/lib64/libwfdservice.so|429839b831a8b16fb858179241dc6183c50bdf13|54624fd8c8ef2932e71c4b3ce176fb712e884f5a
+system_ext/lib64/libwfdsinksm.so|e714120166d6480ada0b629ddd73c499c73c55a2
+system_ext/lib64/libwfduibcinterface.so|62a596c93efa57bdc79b078d74a3ccf4d19d1f58
+system_ext/lib64/libwfduibcsink.so|a6fc5d0245e23648812a535f7338d562c9317f09
+system_ext/lib64/libwfduibcsinkinterface.so|2db07ec7a9a6206d2782439e247b35fbe62a550f
+system_ext/lib64/libwfduibcsrc.so|ac3e0988fb5c36c6c4561f04e0e5d53d7de2ad76
+system_ext/lib64/libwfduibcsrcinterface.so|d19e9b5c35f61cc696a9c999dce6eb11d781bd8c
+system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|7b3051498476202797fce711a6dcc42ae6a7b8ea
+system_ext/priv-app/WfdService/WfdService.apk|7d7e4ce1ec07338f1d2abf39035a8f44714a4a40
+
+# missing: system/framework/WfdCommon.jar
+# missing: system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk.so
+
+# WiFi Display (vendor)
+vendor/bin/wifidisplayhalservice
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
+vendor/etc/seccomp_policy/wifidisplayhalservice.policy
+vendor/etc/wfdconfig.xml
+vendor/lib/libFileMux_proprietary.so
+vendor/lib/libmm-hdcpmgr.so
+vendor/lib/libmmrtpdecoder_proprietary.so
+vendor/lib/libmmrtpencoder_proprietary.so
+vendor/lib/libwfdcodecv4l2_proprietary.so
+vendor/lib/libwfdcommonutils_proprietary.so
+vendor/lib/libwfdconfigutils_proprietary.so
+vendor/lib/libwfddisplayconfig_proprietary.so
+vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfdhdcpservice_proprietary.so
+vendor/lib/libwfdmminterface_proprietary.so
+vendor/lib/libwfdmmservice_proprietary.so
+vendor/lib/libwfdmmsrc_proprietary.so
+vendor/lib/libwfdmodulehdcpsession.so
+vendor/lib/libwfdrtsp_proprietary.so
+vendor/lib/libwfdsessionmodule.so
+vendor/lib/libwfdsourcesession_proprietary.so
+vendor/lib/libwfdsourcesm_proprietary.so
+vendor/lib/libwfduibcinterface_proprietary.so
+vendor/lib/libwfduibcsink_proprietary.so
+vendor/lib/libwfduibcsinkinterface_proprietary.so
+vendor/lib/libwfduibcsrc_proprietary.so
+vendor/lib/libwfduibcsrcinterface_proprietary.so
+vendor/lib/libwfdutils_proprietary.so
+vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
+
+# ---------------------------------------------------------------------------
+# Lenovo / TB-9707F delta
+# ---------------------------------------------------------------------------
+
+# Lenovo hardware HAL
+vendor/bin/hw/vendor.lenovo.hardware.battery@1.0-service
+vendor/bin/hw/vendor.lenovo.hardware.display@1.0-service
+vendor/bin/hw/vendor.lenovo.hardware.factory@1.0-service
+vendor/bin/hw/vendor.lenovo.hardware.misc@1.0-service
+vendor/bin/hw/vendor.lenovo.hardware.performance@1.0-service
+vendor/bin/hw/vendor.lenovo.hardware.touchscreen@1.0-service
+vendor/etc/init/vendor.lenovo.hardware.battery@1.0-service.rc
+vendor/etc/init/vendor.lenovo.hardware.display@1.0-service.rc
+vendor/etc/init/vendor.lenovo.hardware.factory@1.0-service.rc
+vendor/etc/init/vendor.lenovo.hardware.misc@1.0-service.rc
+vendor/etc/init/vendor.lenovo.hardware.performance@1.0-service.rc
+vendor/etc/init/vendor.lenovo.hardware.touchscreen@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.lenovo.hardware.battery@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.lenovo.hardware.display@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.lenovo.hardware.factory@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.lenovo.hardware.misc@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.lenovo.hardware.performance@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.lenovo.hardware.touchscreen@1.0-service.xml
+vendor/lib/hw/vendor.lenovo.hardware.battery@1.0-impl.so
+vendor/lib/hw/vendor.lenovo.hardware.factory@1.0-impl.so
+vendor/lib/hw/vendor.lenovo.hardware.misc@1.0-impl.so
+vendor/lib/hw/vendor.lenovo.hardware.performance@1.0-impl.so
+vendor/lib/hw/vendor.lenovo.hardware.touchscreen@1.0-impl.so
+vendor/lib/vendor.lenovo.hardware.battery@1.0.so
+vendor/lib/vendor.lenovo.hardware.factory@1.0.so
+vendor/lib/vendor.lenovo.hardware.misc@1.0.so
+vendor/lib/vendor.lenovo.hardware.performance@1.0.so
+vendor/lib/vendor.lenovo.hardware.touchscreen@1.0.so
+vendor/lib64/hw/vendor.lenovo.hardware.battery@1.0-impl.so
+vendor/lib64/hw/vendor.lenovo.hardware.factory@1.0-impl.so
+vendor/lib64/hw/vendor.lenovo.hardware.misc@1.0-impl.so
+vendor/lib64/hw/vendor.lenovo.hardware.performance@1.0-impl.so
+vendor/lib64/hw/vendor.lenovo.hardware.touchscreen@1.0-impl.so
+vendor/lib64/vendor.lenovo.hardware.battery@1.0.so
+vendor/lib64/vendor.lenovo.hardware.display@1.0.so
+vendor/lib64/vendor.lenovo.hardware.factory@1.0.so
+vendor/lib64/vendor.lenovo.hardware.misc@1.0.so
+vendor/lib64/vendor.lenovo.hardware.performance@1.0.so
+vendor/lib64/vendor.lenovo.hardware.touchscreen@1.0.so
+
+# Vibrator (Qualcomm + AAC RichTap)
+odm/etc/aac_richtap.config
+odm/etc/aac_richtap_1.config
+vendor/bin/hw/vendor.qti.hardware.vibrator.service
+vendor/bin/hw/vendor.qti.hardware.vibrator_dual@1.2-service
+vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
+vendor/etc/init/vendor.qti.hardware.vibrator_dual@1.2-service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
+vendor/lib/libaacvibrator.so
+vendor/lib/soundfx/libawinic_haptic_effect.so
+vendor/lib/soundfx/libhal_awinic_haptic_effect.so
+vendor/lib/soundfx/libhaptic_effect.so
+vendor/lib/soundfx/libm16_hal_awinic_haptic_effect.so
+vendor/lib/soundfx/libpeak_play_haptic_effect.so
+vendor/lib64/libaacvibrator.so
+vendor/lib64/libqtivibratoreffect.so
+vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
+vendor/lib64/vendor.qti.hardware.vibrator.impl.so
+vendor/lib64/vendor.qti.hardware.vibrator_dual.device@1.0.so
+
+# Haptic firmware (Awinic AW8697 / RichTap RTP)
+vendor/firmware/100_Haptic_Left_RTP.bin
+vendor/firmware/100_Haptic_Right_RTP.bin
+vendor/firmware/101_Haptic_Left_RTP.bin
+vendor/firmware/101_Haptic_Right_RTP.bin
+vendor/firmware/102_Haptic_Left_RTP.bin
+vendor/firmware/102_Haptic_Right_RTP.bin
+vendor/firmware/103_Haptic_Left_RTP.bin
+vendor/firmware/103_Haptic_Right_RTP.bin
+vendor/firmware/104_Haptic_Left_RTP.bin
+vendor/firmware/104_Haptic_Right_RTP.bin
+vendor/firmware/105_Haptic_Left_RTP.bin
+vendor/firmware/105_Haptic_Right_RTP.bin
+vendor/firmware/106_Haptic_Left_RTP.bin
+vendor/firmware/106_Haptic_Right_RTP.bin
+vendor/firmware/107_Haptic_Left_RTP.bin
+vendor/firmware/107_Haptic_Right_RTP.bin
+vendor/firmware/108_Haptic_Left_RTP.bin
+vendor/firmware/108_Haptic_Right_RTP.bin
+vendor/firmware/109_Haptic_Left_RTP.bin
+vendor/firmware/109_Haptic_Right_RTP.bin
+vendor/firmware/110_Haptic_Left_RTP.bin
+vendor/firmware/110_Haptic_Right_RTP.bin
+vendor/firmware/111_Haptic_Left_RTP.bin
+vendor/firmware/111_Haptic_Right_RTP.bin
+vendor/firmware/112_Haptic_Left_RTP.bin
+vendor/firmware/112_Haptic_Right_RTP.bin
+vendor/firmware/113_Haptic_Left_RTP.bin
+vendor/firmware/113_Haptic_Right_RTP.bin
+vendor/firmware/114_Haptic_Left_RTP.bin
+vendor/firmware/114_Haptic_Right_RTP.bin
+vendor/firmware/115_Haptic_Left_RTP.bin
+vendor/firmware/115_Haptic_Right_RTP.bin
+vendor/firmware/116_Haptic_Left_RTP.bin
+vendor/firmware/116_Haptic_Right_RTP.bin
+vendor/firmware/117_Haptic_Left_RTP.bin
+vendor/firmware/117_Haptic_Right_RTP.bin
+vendor/firmware/118_Haptic_Left_RTP.bin
+vendor/firmware/118_Haptic_Right_RTP.bin
+vendor/firmware/119_Haptic_Left_RTP.bin
+vendor/firmware/119_Haptic_Right_RTP.bin
+vendor/firmware/144_Haptic_Left_RTP.bin
+vendor/firmware/144_Haptic_Right_RTP.bin
+vendor/firmware/145_Haptic_Left_RTP.bin
+vendor/firmware/145_Haptic_Right_RTP.bin
+vendor/firmware/146_Haptic_Left_RTP.bin
+vendor/firmware/146_Haptic_Right_RTP.bin
+vendor/firmware/147_Haptic_Left_RTP.bin
+vendor/firmware/147_Haptic_Right_RTP.bin
+vendor/firmware/148_Haptic_Left_RTP.bin
+vendor/firmware/148_Haptic_Right_RTP.bin
+vendor/firmware/149_Haptic_Left_RTP.bin
+vendor/firmware/149_Haptic_Right_RTP.bin
+vendor/firmware/150_Haptic_Left_RTP.bin
+vendor/firmware/150_Haptic_Right_RTP.bin
+vendor/firmware/151_AGT_RTP.bin
+vendor/firmware/151_AGT_RTP_x.bin
+vendor/firmware/152_Aircraft_Left_RTP.bin
+vendor/firmware/152_Aircraft_Right_RTP.bin
+vendor/firmware/153_BaBa_RTP.bin
+vendor/firmware/153_BaBa_RTP_x.bin
+vendor/firmware/154_Bloom_RTP.bin
+vendor/firmware/154_Bloom_RTP_x.bin
+vendor/firmware/155_Bottle_RTP.bin
+vendor/firmware/155_Bottle_RTP_x.bin
+vendor/firmware/156_Bright_RTP.bin
+vendor/firmware/156_Bright_RTP_x.bin
+vendor/firmware/157_CountryGuitar_RTP.bin
+vendor/firmware/157_CountryGuitar_RTP_x.bin
+vendor/firmware/158_Di_RTP.bin
+vendor/firmware/158_Di_RTP_x.bin
+vendor/firmware/159_Drip_RTP.bin
+vendor/firmware/159_Drip_RTP_x.bin
+vendor/firmware/160_Du_RTP.bin
+vendor/firmware/160_Du_RTP_x.bin
+vendor/firmware/161_Dudu_RTP.bin
+vendor/firmware/161_Dudu_RTP_x.bin
+vendor/firmware/162_FleetingTime_RTP.bin
+vendor/firmware/162_FleetingTime_RTP_x.bin
+vendor/firmware/163_Flowering_RTP.bin
+vendor/firmware/163_Flowering_RTP_x.bin
+vendor/firmware/164_Fluting_RTP.bin
+vendor/firmware/164_Fluting_RTP_x.bin
+vendor/firmware/165_FoodBell_RTP.bin
+vendor/firmware/165_FoodBell_RTP_x.bin
+vendor/firmware/166_GoGo_RTP.bin
+vendor/firmware/166_GoGo_RTP_x.bin
+vendor/firmware/167_Mechanical_Left_RTP.bin
+vendor/firmware/167_Mechanical_Right_RTP.bin
+vendor/firmware/168_Mouse_RTP.bin
+vendor/firmware/168_Mouse_RTP_x.bin
+vendor/firmware/169_Laser_Left_RTP.bin
+vendor/firmware/169_Laser_Right_RTP.bin
+vendor/firmware/170_Ring_RTP.bin
+vendor/firmware/170_Ring_RTP_x.bin
+vendor/firmware/171_Straight_Mallet_Left_RTP.bin
+vendor/firmware/171_Straight_Mallet_Right_RTP.bin
+vendor/firmware/172_Signal_RTP.bin
+vendor/firmware/172_Signal_RTP_x.bin
+vendor/firmware/173_Sword_Left_RTP.bin
+vendor/firmware/173_Sword_Right_RTP.bin
+vendor/firmware/174_Sports_Car_Left_RTP.bin
+vendor/firmware/174_Sports_Car_Right_RTP.bin
+vendor/firmware/175_Race_Car_Left_RTP.bin
+vendor/firmware/175_Race_Car_Right_RTP.bin
+vendor/firmware/176_Stable_RTP.bin
+vendor/firmware/176_Stable_RTP_x.bin
+vendor/firmware/177_Strange_RTP.bin
+vendor/firmware/177_Strange_RTP_x.bin
+vendor/firmware/178_Stream_RTP.bin
+vendor/firmware/178_Stream_RTP_x.bin
+vendor/firmware/179_Success_RTP.bin
+vendor/firmware/179_Success_RTP_x.bin
+vendor/firmware/180_Talk_RTP.bin
+vendor/firmware/180_Talk_RTP_x.bin
+vendor/firmware/181_Technology_Left_RTP.bin
+vendor/firmware/181_Technology_Right_RTP.bin
+vendor/firmware/182_Telly_RTP.bin
+vendor/firmware/182_Telly_RTP_x.bin
+vendor/firmware/183_tone_RTP.bin
+vendor/firmware/183_tone_RTP_x.bin
+vendor/firmware/184_Tumbler_RTP.bin
+vendor/firmware/184_Tumbler_RTP_x.bin
+vendor/firmware/185_Footsteps_Left_RTP.bin
+vendor/firmware/185_Footsteps_Right_RTP.bin
+vendor/firmware/186_Wave_RTP.bin
+vendor/firmware/186_Wave_RTP_x.bin
+vendor/firmware/187_Blinking_RTP.bin
+vendor/firmware/187_Blinking_RTP_x.bin
+vendor/firmware/188_Brisk_moment_RTP.bin
+vendor/firmware/188_Brisk_moment_RTP_x.bin
+vendor/firmware/189_ClassicPiano_RTP.bin
+vendor/firmware/189_ClassicPiano_RTP_x.bin
+vendor/firmware/190_Clear_RTP.bin
+vendor/firmware/190_Clear_RTP_x.bin
+vendor/firmware/191_DalaGuitar_RTP.bin
+vendor/firmware/191_DalaGuitar_RTP_x.bin
+vendor/firmware/192_DingDang_RTP.bin
+vendor/firmware/192_DingDang_RTP_x.bin
+vendor/firmware/193_DoDaDa_RTP.bin
+vendor/firmware/193_DoDaDa_RTP_x.bin
+vendor/firmware/194_Dreamtime_RTP.bin
+vendor/firmware/194_Dreamtime_RTP_x.bin
+vendor/firmware/195_Early_morninng_RTP.bin
+vendor/firmware/195_Early_morninng_RTP_x.bin
+vendor/firmware/196_Eighties_RTP.bin
+vendor/firmware/196_Eighties_RTP_x.bin
+vendor/firmware/197_FunkyGuitar_RTP.bin
+vendor/firmware/197_FunkyGuitar_RTP_x.bin
+vendor/firmware/198_Guitar_RTP.bin
+vendor/firmware/198_Guitar_RTP_x.bin
+vendor/firmware/199_HappyTime_RTP.bin
+vendor/firmware/199_HappyTime_RTP_x.bin
+vendor/firmware/200_Home_RTP.bin
+vendor/firmware/200_Home_RTP_x.bin
+vendor/firmware/201_Jete_RTP.bin
+vendor/firmware/201_Jete_RTP_x.bin
+vendor/firmware/202_Kalimba_RTP.bin
+vendor/firmware/202_Kalimba_RTP_x.bin
+vendor/firmware/203_landscape_RTP.bin
+vendor/firmware/203_landscape_RTP_x.bin
+vendor/firmware/204_LullabyPiano_RTP.bin
+vendor/firmware/204_LullabyPiano_RTP_x.bin
+vendor/firmware/205_MaLing_RTP.bin
+vendor/firmware/205_MaLing_RTP_x.bin
+vendor/firmware/206_Moment_of_spirit_RTP.bin
+vendor/firmware/206_Moment_of_spirit_RTP_x.bin
+vendor/firmware/207_PianoNoise_RTP.bin
+vendor/firmware/207_PianoNoise_RTP_x.bin
+vendor/firmware/208_PingPong_RTP.bin
+vendor/firmware/208_PingPong_RTP_x.bin
+vendor/firmware/209_RainbowSweet_RTP.bin
+vendor/firmware/209_RainbowSweet_RTP_x.bin
+vendor/firmware/210_Travel_Left_RTP.bin
+vendor/firmware/210_Travel_Right_RTP.bin
+vendor/firmware/211_Soothing_Left_RTP.bin
+vendor/firmware/211_Soothing_Right_RTP.bin
+vendor/firmware/212_Elves_Left_RTP.bin
+vendor/firmware/212_Elves_Right_RTP.bin
+vendor/firmware/213_Psychedelic_Left_RTP.bin
+vendor/firmware/213_Psychedelic_Right_RTP.bin
+vendor/firmware/214_Dark_Left_RTP.bin
+vendor/firmware/214_Dark_Right_RTP.bin
+vendor/firmware/215_Promote_Left_RTP.bin
+vendor/firmware/215_Promote_Right_RTP.bin
+vendor/firmware/216_Lenovo_Electronic_Left_RTP.bin
+vendor/firmware/216_Lenovo_Electronic_Right_RTP.bin
+vendor/firmware/217_Lenovo_Gaming_Left_RTP.bin
+vendor/firmware/217_Lenovo_Gaming_Right_RTP.bin
+vendor/firmware/218_Lenovo_Guitar_Left_RTP.bin
+vendor/firmware/218_Lenovo_Guitar_Right_RTP.bin
+vendor/firmware/219_Lenovo_Dynamic_Left_RTP.bin
+vendor/firmware/219_Lenovo_Dynamic_Right_RTP.bin
+vendor/firmware/220_Lenovo_Pure_Tone_Left_RTP.bin
+vendor/firmware/220_Lenovo_Pure_Tone_Right_RTP.bin
+vendor/firmware/221_Lenovo_Symphony_Left_RTP.bin
+vendor/firmware/221_Lenovo_Symphony_Right_RTP.bin
+vendor/firmware/222_Teleport_Left_RTP.bin
+vendor/firmware/222_Teleport_Right_RTP.bin
+vendor/firmware/223_GameMoment_Left_RTP.bin
+vendor/firmware/223_GameMoment_Right_RTP.bin
+vendor/firmware/223_SecretGarden_RTP.bin
+vendor/firmware/223_SecretGarden_RTP_x.bin
+vendor/firmware/224_Silence_RTP.bin
+vendor/firmware/224_Silence_RTP_x.bin
+vendor/firmware/226_Stars_RTP.bin
+vendor/firmware/226_Stars_RTP_x.bin
+vendor/firmware/227_SunnyDay_RTP.bin
+vendor/firmware/227_SunnyDay_RTP_x.bin
+vendor/firmware/228_Heartbeat_RTP.bin
+vendor/firmware/228_Heartbeat_RTP_x.bin
+vendor/firmware/231_Awoken_RTP.bin
+vendor/firmware/231_Awoken_RTP_x.bin
+vendor/firmware/232_EtherealMallets_RTP.bin
+vendor/firmware/232_EtherealMallets_RTP_x.bin
+vendor/firmware/233_Inception_RTP.bin
+vendor/firmware/233_Inception_RTP_x.bin
+vendor/firmware/234_Lullaby_RTP.bin
+vendor/firmware/234_Lullaby_RTP_x.bin
+vendor/firmware/235_Potpourri_RTP.bin
+vendor/firmware/235_Potpourri_RTP_x.bin
+vendor/firmware/236_Respire_RTP.bin
+vendor/firmware/236_Respire_RTP_x.bin
+vendor/firmware/237_Legion_RTP.bin
+vendor/firmware/237_Legion_RTP_x.bin
+vendor/firmware/239_SecretGarden_RTP.bin
+vendor/firmware/239_SecretGarden_RTP_x.bin
+vendor/firmware/240_Streamer_RTP.bin
+vendor/firmware/240_Streamer_RTP_x.bin
+vendor/firmware/241_Pulse_RTP.bin
+vendor/firmware/241_Pulse_RTP_x.bin
+vendor/firmware/242_Starlight_RTP.bin
+vendor/firmware/242_Starlight_RTP_x.bin
+vendor/firmware/243_Light_RTP.bin
+vendor/firmware/243_Light_RTP_x.bin
+vendor/firmware/245_hihat_RTP.bin
+vendor/firmware/245_hihat_RTP_x.bin
+vendor/firmware/246_kick_RTP.bin
+vendor/firmware/246_kick_RTP_x.bin
+vendor/firmware/247_snare_RTP.bin
+vendor/firmware/247_snare_RTP_x.bin
+vendor/firmware/251_CQA_RTP.bin
+vendor/firmware/251_CQA_RTP_x.bin
+vendor/firmware/Ding_RTP_23.bin
+vendor/firmware/Ding_RTP_x_23.bin
+vendor/firmware/Dreams_RTP.bin
+vendor/firmware/Dreams_RTP_x.bin
+vendor/firmware/MaLing1_RTP.bin
+vendor/firmware/MaLing1x_RTP.bin
+vendor/firmware/Stars2_RTP.bin
+vendor/firmware/Stars2x_RTP.bin
+vendor/firmware/TribalLangua_RTP.bin
+vendor/firmware/TribalLangua_RTP_x.bin
+vendor/firmware/aw8697_haptic.bin
+vendor/firmware/aw8697_osc_rtp_24K_5s.bin
+vendor/firmware/aw8697_rtp.bin
+vendor/firmware/aw8697_rtp_lighthouse.bin
+vendor/firmware/aw8697_rtp_silk.bin
+vendor/firmware/aw8697x_haptic.bin
+vendor/firmware/aw8697x_osc_rtp_24K_5s.bin
+vendor/firmware/aw8697x_rtp.bin
+vendor/firmware/aw8697x_rtp_lighthouse.bin
+vendor/firmware/aw8697x_rtp_silk.bin
+vendor/firmware/awinic_haptic_params.bin
+vendor/firmware/haptic_ram.bin
+vendor/firmware/haptic_rtp.bin
+vendor/firmware/haptic_rtp_lighthouse.bin
+vendor/firmware/haptic_rtp_osc_24K_5s.bin
+vendor/firmware/haptic_rtp_silk.bin
+
+# Audio (Cirrus Logic CS35L45 speaker protection)
+vendor/firmware/spk1-cs35l45-dsp1-spk-cali.bin
+vendor/firmware/spk1-cs35l45-dsp1-spk-cali.wmfw
+vendor/firmware/spk1-cs35l45-dsp1-spk-prot.bin
+vendor/firmware/spk1-cs35l45-dsp1-spk-prot.wmfw
+vendor/firmware/spk1_fast_switch_music.txt
+vendor/firmware/spk1_fast_switch_ringtone.txt
+vendor/firmware/spk1_fast_switch_voicecall.txt
+vendor/firmware/spk2-cs35l45-dsp1-spk-cali.bin
+vendor/firmware/spk2-cs35l45-dsp1-spk-cali.wmfw
+vendor/firmware/spk2-cs35l45-dsp1-spk-prot.bin
+vendor/firmware/spk2-cs35l45-dsp1-spk-prot.wmfw
+vendor/firmware/spk2_fast_switch_music.txt
+vendor/firmware/spk2_fast_switch_ringtone.txt
+vendor/firmware/spk2_fast_switch_voicecall.txt
+vendor/lib/libcirrusspkrprot.so
+vendor/lib/modules/audio_cirrus_cs35l45.ko
+vendor/lib/modules/audio_cirrus_wm_adsp.ko
+vendor/lib64/libcirrusspkrprot.so
+
+# Display and touch panel (Novatek NT36523)
+vendor/etc/display/advanced_sf_offsets.xml
+vendor/etc/qdcm_calib_data_nt36523_lcd_vid_mode_dsi_panel.xml
+vendor/firmware/novatek_ts_fw.bin
+vendor/firmware/novatek_ts_mp.bin
+vendor/lib/modules/lcd.ko
+
+# WLAN (QCA6390)
+vendor/etc/wifi/qca6390/WCNSS_qcom_cfg.ini
+vendor/lib/modules/qca_cld3_qca6390.ko
+
+# Dolby (DAX3 / DMS / Dolby C2)
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service
+vendor/etc/dolby/dax-default.xml
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
+vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
+vendor/lib/libdlbpreg.so
+vendor/lib/soundfx/libdlbvol.so
+vendor/lib/vendor.dolby.hardware.dms@2.0.so
+vendor/lib64/libcodec2_store_dolby.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/libdlbpreg.so
+vendor/lib64/soundfx/libdlbvol.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+
+# Camera (ArcSoft Pandora algorithms)
+vendor/etc/camera/pandora/bst_hdrdetect.cfg
+vendor/etc/camera/pandora/source_front/Pandora.algorithm.360ai.PortraitMask.xml
+vendor/etc/camera/pandora/source_front/Pandora.algorithm.lenovo.bokeh.xml
+vendor/etc/camera/pandora/source_front/Pandora.algorithm.meishe.beauty.xml
+vendor/etc/camera/pandora/source_front/Pandora.algorithm.niklas.DummyPreviewVideoAlgorithm.xml
+vendor/etc/camera/pandora/source_front/Pandora.algorithm.niklas.DummySnapshotAlgorithm.xml
+vendor/etc/camera/pandora/source_front/Pandora.algorithm.xsd
+vendor/etc/camera/pandora/source_front/Pandora.conditions.xml
+vendor/etc/camera/pandora/source_front/Pandora.conditions.xsd
+vendor/etc/camera/pandora/source_front/Pandora.pipeline.PreviewVideo.1.xml
+vendor/etc/camera/pandora/source_front/Pandora.pipeline.Snapshot.1.xml
+vendor/etc/camera/pandora/source_front/Pandora.pipeline.xsd
+vendor/etc/camera/pandora/source_front/Pandora.segment.xsd
+vendor/etc/camera/pandora/source_main/Pandora.algorithm.niklas.DummyPreviewVideoAlgorithm.xml
+vendor/etc/camera/pandora/source_main/Pandora.algorithm.niklas.DummySnapshotAlgorithm.xml
+vendor/etc/camera/pandora/source_main/Pandora.algorithm.xsd
+vendor/etc/camera/pandora/source_main/Pandora.conditions.xml
+vendor/etc/camera/pandora/source_main/Pandora.conditions.xsd
+vendor/etc/camera/pandora/source_main/Pandora.pipeline.PreviewVideo.1.xml
+vendor/etc/camera/pandora/source_main/Pandora.pipeline.Snapshot.1.xml
+vendor/etc/camera/pandora/source_main/Pandora.pipeline.xsd
+vendor/etc/camera/pandora/source_main/Pandora.segment.xsd
+vendor/etc/camera/pandora/source_wide/Pandora.algorithm.niklas.DummyPreviewVideoAlgorithm.xml
+vendor/etc/camera/pandora/source_wide/Pandora.algorithm.niklas.DummySnapshotAlgorithm.xml
+vendor/etc/camera/pandora/source_wide/Pandora.algorithm.xsd
+vendor/etc/camera/pandora/source_wide/Pandora.conditions.xml
+vendor/etc/camera/pandora/source_wide/Pandora.conditions.xsd
+vendor/etc/camera/pandora/source_wide/Pandora.pipeline.PreviewVideo.1.xml
+vendor/etc/camera/pandora/source_wide/Pandora.pipeline.Snapshot.1.xml
+vendor/etc/camera/pandora/source_wide/Pandora.pipeline.xsd
+vendor/etc/camera/pandora/source_wide/Pandora.segment.xsd
+vendor/lib64/camera/components/com.qti.node.lenovo.so
+vendor/lib64/libDummyPreviewVideoAlgorithm.so
+vendor/lib64/libDummySnapshotAlgorithm.so
+vendor/lib64/libNvBeautyEffect.so
+vendor/lib64/libaw_portrait_mask.so
+vendor/lib64/libpandora.algorithm.360ai.PortraitMask.1.so
+vendor/lib64/libpandora.algorithm.lenovo.bokeh.1.so
+vendor/lib64/libpandora.algorithm.meishe.beauty.1.so
+vendor/lib64/libpandora.algorithm.niklas.DummyPreviewVideoAlgorithm.1.so
+vendor/lib64/libpandora.algorithm.niklas.DummySnapshotAlgorithm.1.so
+vendor/lib64/libpandora.pal.platform.generic.products.so
+vendor/lib64/libpandora.render.so
+vendor/lib64/libpandora.so
