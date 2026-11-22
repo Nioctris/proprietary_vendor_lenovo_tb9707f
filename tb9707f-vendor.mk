@@ -106,6 +106,12 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/tb9707f/proprietary/vendor/firmware/aw8697x_haptic.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8697x_haptic.bin \
     vendor/lenovo/tb9707f/proprietary/vendor/firmware/awinic_haptic_params.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/awinic_haptic_params.bin \
     vendor/lenovo/tb9707f/proprietary/vendor/firmware/haptic_ram.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/haptic_ram.bin \
+    vendor/lenovo/tb9707f/proprietary/vendor/firmware/ipa_fws.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b00 \
+    vendor/lenovo/tb9707f/proprietary/vendor/firmware/ipa_fws.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b01 \
+    vendor/lenovo/tb9707f/proprietary/vendor/firmware/ipa_fws.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b02 \
+    vendor/lenovo/tb9707f/proprietary/vendor/firmware/ipa_fws.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b03 \
+    vendor/lenovo/tb9707f/proprietary/vendor/firmware/ipa_fws.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b04 \
+    vendor/lenovo/tb9707f/proprietary/vendor/firmware/ipa_fws.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.mdt \
     vendor/lenovo/tb9707f/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw.bin \
     vendor/lenovo/tb9707f/proprietary/vendor/firmware/novatek_ts_mp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_mp.bin \
     vendor/lenovo/tb9707f/proprietary/vendor/firmware/spk1-cs35l45-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/spk1-cs35l45-dsp1-spk-cali.bin \
