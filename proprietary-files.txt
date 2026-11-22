@@ -703,7 +703,3 @@ vendor/lib64/libpandora.render.so
 vendor/lib64/libpandora.so
 
 # Protobuf 3.9.1 kept from the stock vendor for the camera accelerator blobs
-vendor/lib/libprotobuf-cpp-full-3.9.1.so
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so
-vendor/lib/libprotobuf-cpp-lite-3.9.1.so
-vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
