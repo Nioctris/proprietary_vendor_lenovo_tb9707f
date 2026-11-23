@@ -8849,12 +8849,12 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.keymaster@4.0-service-qti",
+    name: "android.hardware.keymaster@4.1-service-qti",
     owner: "lenovo",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti",
+                "proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti",
             ],
             shared_libs: [
                 "liblog",
@@ -8864,6 +8864,7 @@ cc_prebuilt_binary {
                 "libhardware",
                 "libhidlbase",
                 "android.hardware.keymaster@4.0",
+                "android.hardware.keymaster@4.1",
                 "libqtikeymaster4",
                 "libcrypto",
                 "libc++",
