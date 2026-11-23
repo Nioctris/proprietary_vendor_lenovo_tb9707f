@@ -646,18 +646,21 @@ vendor/etc/wifi/qca6390/WCNSS_qcom_cfg.ini
 vendor/lib/modules/qca_cld3_qca6390.ko
 
 # Dolby (DAX3 / DMS / Dolby C2)
+# Dolby C2 disabled: it has no SELinux domain and needs libcodec2_soft_ac4dec,
+# but its manifest declares IComponentStore/default1, so mediaserver and with
+# it StorageManagerService block forever waiting for it.
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service
+#vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
-vendor/etc/media_codecs_dolby_audio.xml
+#vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
+#vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
-vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
+#vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
 vendor/lib/libdlbpreg.so
 vendor/lib/soundfx/libdlbvol.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
-vendor/lib64/libcodec2_store_dolby.so
+#vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/libdlbpreg.so
@@ -710,3 +713,22 @@ vendor/lib64/libpandora.render.so
 vendor/lib64/libpandora.so
 
 # Protobuf 3.9.1 kept from the stock vendor for the camera accelerator blobs
+
+# Audio calibration (ACDB)
+vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
