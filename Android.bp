@@ -10525,3 +10525,2169 @@ prebuilt_rfsa {
     relative_install_path: "adsp",
     soc_specific: true,
 }
+
+// Camera (CamX/CHI) from the stock vendor: ELF checks off
+cc_prebuilt_library_shared {
+    name: "camera.qcom",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/camera.qcom.so"],
+        },
+    },
+    relative_install_path: "hw",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.eeprom.irs2381c_polar",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.irs2381c_polar.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.eeprom.lce_gc08a3",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.lce_gc08a3.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.eeprom.qtech_s5k4h7",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.qtech_s5k4h7.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.eeprom.truly_cmb433",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.TXD_ov13b10",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.TXD_ov13b10.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx318",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx318.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx334",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx334.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx362",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx362.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx376",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx376.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx386",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx386.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx476",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx476.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx481",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx481.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx519",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx519.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx563",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx563.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx576",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx576.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx577",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx577.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.imx586",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx586.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.lce_gc08a3",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.lce_gc08a3.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.lce_ov8856",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.lce_ov8856.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.max7366_6dof",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.max7366_6dof.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.max7366_eyetrack",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.max7366_eyetrack.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.max7366_ov6211",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.max7366_ov6211.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.max7366_ov9282",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.max7366_ov9282.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ofilm_ov13b10",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ofilm_ov13b10.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov12a10",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov12a10.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov12a10_front",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov12a10_front.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov13855",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov13855.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov13880",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov13880.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov6211_master",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov6211_master.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov6211_slave",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov6211_slave.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov7251",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov7251.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov8856",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov8856.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov8856_master",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov8856_master.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov8856_slave",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov8856_slave.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov9282_master",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov9282_master.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.ov9282_slave",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov9282_slave.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.qtech_s5k4h7",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.qtech_s5k4h7.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.s5k2l7",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k2l7.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.s5k2x5sp",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k2x5sp.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.s5k3m5",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k3m5.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.s5k3p9",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k3p9.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.sensor.s5k5e9yu05",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k5e9yu05.so"],
+        },
+    },
+    relative_install_path: "camera",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.camx.chiiqutils",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.camx.chiiqutils.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.eisv2",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.eisv2.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.eisv3",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.eisv3.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.hvx.addconstant",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.hvx.addconstant.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.hvx.binning",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.hvx.binning.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.customhwnode",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.customhwnode.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.depth",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.depth.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.dummyrtb",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.dummyrtb.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.dummysat",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.dummysat.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.eisv2",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.eisv2.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.eisv3",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.eisv3.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.fcv",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.fcv.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.gpu",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.gpu.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.lenovo",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.lenovo.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.memcpy",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.memcpy.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.remosaic",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.remosaic.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.stich",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.stich.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.node.swregistration",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swregistration.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.aec",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.aec.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.aecwrapper",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.aecwrapper.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.af",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.af.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.afd",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.afd.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.afwrapper",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.afwrapper.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.asd",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.asd.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.awb",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.awb.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.awbwrapper",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.awbwrapper.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.haf",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.haf.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.hafoverride",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.hafoverride.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.pdlib",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.pdlib.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.pdlibsony",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibsony.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.pdlibwrapper",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.stats.tracker",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.tracker.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qtistatic.stats.aec",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.aec.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qtistatic.stats.af",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.af.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qtistatic.stats.awb",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.awb.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qtistatic.stats.pdlib",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdepthmapwrapper",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/camera/components/libdepthmapwrapper.so"],
+        },
+    },
+    relative_install_path: "camera/components",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbitmlengine",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libbitmlengine.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_nn_stub",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamera_nn_stub.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamxexternalformatutils",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamxexternalformatutils.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamxfacialfeatures",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamxfacialfeatures.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamxfdalgo",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamxfdalgo.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamxfdengine",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamxfdengine.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamxifestriping",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamxifestriping.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamximageformatutils",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamximageformatutils.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamxncs",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamxncs.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamxstatscore",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamxstatscore.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamxswprocessalgo",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamxswprocessalgo.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamxtintlessalgo",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamxtintlessalgo.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchilog",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libchilog.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcom.qti.chinodeutils",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcom.qti.chinodeutils.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvp2",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcvp2.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvp2_hfi",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcvp2_hfi.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvp_common",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcvp_common.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdepthcomputation",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libdepthcomputation.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libofflinelog",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libofflinelog.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libos",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libos.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libspectre",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libspectre.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsynx",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsynx.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libthreadutils",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libthreadutils.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "vendor_lib_rfsa_adsp_libcamera_nn_skel_so",
+    filename: "libcamera_nn_skel.so",
+    owner: "lenovo",
+    src: "proprietary/vendor/lib/rfsa/adsp/libcamera_nn_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.chi.override",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/com.qti.chi.override.so"],
+        },
+    },
+    relative_install_path: "hw",
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.camera.postproc@1.0-service-impl",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.anchorsync",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.anchorsync.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.demux",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.demux.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.frameselect",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.frameselect.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.fusion",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.fusion.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.generic",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.generic.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.gs",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.gs.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.hdr",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.hdr.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.memcpy",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.memcpy.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.mfsr",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.mfsr.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.qcfa",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.qcfa.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.rawhdr",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.rawhdr.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.rt",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.rt.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.serializer",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.serializer.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.stub",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.stub.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.swmf",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qti.feature2.swmf.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamerapostproc",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamerapostproc.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libipebpsstriping",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libipebpsstriping.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
