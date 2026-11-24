@@ -10290,3 +10290,238 @@ install_symlink {
     installed_location: "lib64/libq3dtools_adreno.so",
     symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
 }
+
+// Sensors (SSC on the SLPI): ELF checks off, the other deps are already on vendor
+cc_prebuilt_library_shared {
+    name: "sensors.ssc",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/sensors.ssc.so"],
+            shared_libs: ["libsnsapi", "libssc", "libsnsdiaglog", "libsns_fastRPC_util", "libsensorslog"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libssc",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libssc.so"],
+            shared_libs: ["libsensorslog", "libsnsapi"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libssc_default_listener",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libssc_default_listener.so"],
+            shared_libs: [],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsensorslog",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsensorslog.so"],
+            shared_libs: [],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsnsapi",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsnsapi.so"],
+            shared_libs: [],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsnsdiaglog",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsnsdiaglog.so"],
+            shared_libs: ["libsensorslog", "libssc", "libsnsapi"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsns_fastRPC_util",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsns_fastRPC_util.so"],
+            shared_libs: [],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsns_low_lat_stream_stub",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsns_low_lat_stream_stub.so"],
+            shared_libs: ["libsns_fastRPC_util"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsns_device_mode_stub",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsns_device_mode_stub.so"],
+            shared_libs: ["libsns_fastRPC_util"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsns_registry_skel",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsns_registry_skel.so"],
+            shared_libs: [],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "sscrpcd",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/sscrpcd"],
+            shared_libs: [],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "sensors.qti",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/sensors.qti"],
+            shared_libs: ["libssc", "libsensorslog", "libsnsapi"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "vendor_lib_rfsa_adsp_libsns_device_mode_skel_so",
+    filename: "libsns_device_mode_skel.so",
+    owner: "lenovo",
+    src: "proprietary/vendor/lib/rfsa/adsp/libsns_device_mode_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "vendor_lib_rfsa_adsp_libsns_low_lat_stream_skel_so",
+    filename: "libsns_low_lat_stream_skel.so",
+    owner: "lenovo",
+    src: "proprietary/vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
