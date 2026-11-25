@@ -250,6 +250,12 @@ vendor/firmware/ipa_fws.b02
 vendor/firmware/ipa_fws.b03
 vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.mdt
+# IPA uC: without it IPA keeps its proxy clock/bus vote (DDR in the sleep set)
+# forever and the SoC never reaches AOSS sleep / CX collapse
+vendor/firmware/ipa_uc.b00
+vendor/firmware/ipa_uc.b01
+vendor/firmware/ipa_uc.b02
+vendor/firmware/ipa_uc.mdt
 
 # Graphics (Vulkan)
 vendor/lib/hw/vulkan.adreno.so
