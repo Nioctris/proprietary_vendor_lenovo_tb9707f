@@ -646,9 +646,18 @@ vendor/etc/wifi/qca6390/WCNSS_qcom_cfg.ini
 vendor/lib/modules/qca_cld3_qca6390.ko
 
 # Dolby (DAX3 / DMS / Dolby C2)
+# DAP effects, DMS libs and libdapparamstorage are the Motorola DAX 3.6 set
+# (swiitch-OFF-Lab/hardware_dolby, XiaomiDolby): the stock Lenovo 3.5 DAP
+# ignores parameter writes from the open settings app. The DMS binary, its
+# init/VINTF files and dax-default.xml (Lenovo speaker tuning) stay stock.
+# daxService is stock with DaxApplication.ensureVqeAvailabilityForUser
+# patched to return-void (removed IPackageManager API), re-signed with the
+# platform key.
 # Dolby C2 disabled: it has no SELinux domain and needs libcodec2_soft_ac4dec,
 # but its manifest declares IComponentStore/default1, so mediaserver and with
 # it StorageManagerService block forever waiting for it.
+system_ext/etc/permissions/com.dolby.daxservice.xml
+system_ext/priv-app/daxService/daxService.apk;PRESIGNED
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 #vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/etc/dolby/dax-default.xml
@@ -659,12 +668,17 @@ vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
 #vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
 vendor/lib/libdlbpreg.so
 vendor/lib/soundfx/libdlbvol.so
+vendor/lib/soundfx/libswdap.so
+vendor/lib/soundfx/libswgamedap.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
 #vendor/lib64/libcodec2_store_dolby.so
+vendor/lib/libdapparamstorage.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/libdlbpreg.so
 vendor/lib64/soundfx/libdlbvol.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 

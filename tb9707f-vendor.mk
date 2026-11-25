@@ -521,6 +521,10 @@ PRODUCT_PACKAGES += \
     libvpphvx \
     libvpplibrary \
     libdlbvol \
+    libswdap \
+    libswgamedap \
+    libstagefright_foundation-v33.vendor \
+    daxService \
     vendor.dolby.hardware.dms@2.0 \
     vendor.lenovo.hardware.battery@1.0 \
     vendor.lenovo.hardware.factory@1.0 \
@@ -819,3 +823,6 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libEGL_adreno_so \
     vendor_lib64_libGLESv2_adreno_so \
     vendor_lib64_libq3dtools_adreno_so
+
+PRODUCT_COPY_FILES += \
+    vendor/lenovo/tb9707f/proprietary/system_ext/etc/permissions/com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.dolby.daxservice.xml
