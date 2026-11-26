@@ -77,6 +77,9 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/tb9707f/proprietary/vendor/etc/camera/pandora/source_front/Pandora.segment.xsd:$(TARGET_COPY_OUT_VENDOR)/etc/camera/pandora/source_front/Pandora.segment.xsd \
     vendor/lenovo/tb9707f/proprietary/vendor/bin/init.qcom.sensors.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sensors.sh \
     vendor/lenovo/tb9707f/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
+    vendor/lenovo/tb9707f/proprietary/vendor/bin/init.qti.chg_policy.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.chg_policy.sh \
+    vendor/lenovo/tb9707f/proprietary/vendor/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
+    vendor/lenovo/tb9707f/proprietary/vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc \
     vendor/lenovo/tb9707f/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/lenovo/tb9707f/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
     vendor/lenovo/tb9707f/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -479,6 +482,7 @@ PRODUCT_PACKAGES += \
     libsns_device_mode_stub \
     libsns_registry_skel \
     sscrpcd \
+    hvdcp_opti \
     sensors.qti \
     vendor_lib_rfsa_adsp_libsns_device_mode_skel_so \
     vendor_lib_rfsa_adsp_libsns_low_lat_stream_skel_so \

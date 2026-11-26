@@ -1015,3 +1015,9 @@ vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libipebpsstriping.so
+
+# Charger policy (PD/PPS and charge pump control)
+vendor/bin/hvdcp_opti
+vendor/bin/init.qti.chg_policy.sh
+vendor/etc/charger_fstab.qti
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
