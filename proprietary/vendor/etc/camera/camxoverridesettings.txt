@@ -1,0 +1,6 @@
+overrideLogLevels=0
+logInfoMask=0
+logWarningMask=0
+logConfigMask=0
+logCoreCfgMask=0
+logDumpMask=0
