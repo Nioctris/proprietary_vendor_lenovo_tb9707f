@@ -8,8 +8,7 @@
 #
 # The base list below is the kona blob list from
 # device/xiaomi/sm8250-common, filtered against the extracted TB-9707F
-# images. Base entries that are not present in those images are kept as
-# "# missing: <path>" comments so the delta stays auditable.
+# images.
 #
 
 # ADSP
@@ -21,8 +20,6 @@ vendor/lib64/libadsprpc.so
 
 # ADSP modules (aptX)
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
-
-# missing: vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 
 # Audio
 vendor/lib/libacdb-fts.so
@@ -55,21 +52,6 @@ vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
-# Camera motor (sound) - from lmi
-
-# missing: system/media/audio/ui/popup_cangmen_down.ogg
-# missing: system/media/audio/ui/popup_cangmen_up.ogg
-# missing: system/media/audio/ui/popup_chilun_down.ogg
-# missing: system/media/audio/ui/popup_chilun_up.ogg
-# missing: system/media/audio/ui/popup_jijia_down.ogg
-# missing: system/media/audio/ui/popup_jijia_up.ogg
-# missing: system/media/audio/ui/popup_mofa_down.ogg
-# missing: system/media/audio/ui/popup_mofa_up.ogg
-# missing: system/media/audio/ui/popup_muqin_down.ogg
-# missing: system/media/audio/ui/popup_muqin_up.ogg
-# missing: system/media/audio/ui/popup_yingyan_down.ogg
-# missing: system/media/audio/ui/popup_yingyan_up.ogg
-
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
@@ -90,8 +72,6 @@ vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
-# missing: vendor/lib64/libcdsprpc_system.so
-
 vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib64/vendor.qti.hardware.data.lce@1.0.so
@@ -99,8 +79,6 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
-
-# missing: vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so
 
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
@@ -121,8 +99,6 @@ vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# missing: vendor/lib64/libgame_enhance.so
-
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/etc/init/vendor.display.color@1.0-service.rc
@@ -137,8 +113,6 @@ vendor/lib64/vendor.display.postproc@1.0.so
 
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
-
-# missing: system/framework/tcmclient.jar
 
 # DRM (QSEECom)
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
@@ -295,21 +269,11 @@ vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
-# missing: vendor/bin/loc_launcher
-# missing: vendor/bin/xtra-daemon
-# missing: vendor/bin/xtwifi-client
-# missing: vendor/lib64/libgdtap.so
-# missing: vendor/lib64/libizat_client_api.so
-# missing: vendor/lib64/liblbs_core.so
-
 # GNSS configs
 vendor/etc/lowi.conf
 vendor/etc/xtwifi.conf
 
-# missing: vendor/etc/izat.conf
-
 vendor/lib64/librcc.so
-
 
 # IRQ balance
 vendor/bin/msm_irqbalance
@@ -375,10 +339,6 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NVRAM
-
-# missing: vendor/bin/nv_mac
-
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
@@ -390,8 +350,6 @@ vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
-
-# missing: system_ext/app/PowerOffAlarm/PowerOffAlarm.apk
 
 # QCC
 vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
@@ -423,9 +381,6 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
-
-# missing: system/etc/permissions/privapp-permissions-qti.xml
-# missing: system/etc/sysconfig/qti_whitelist.xml
 
 # RIL
 system_ext/etc/permissions/qti_libpermissions.xml
@@ -461,23 +416,6 @@ vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libsystem_health_mon.so
 
-# missing: vendor/bin/ATFWD-daemon
-# missing: vendor/etc/seccomp_policy/atfwd@2.0.policy
-# missing: vendor/lib64/deviceInfoServiceModule.so
-# missing: vendor/lib64/libhydra_common.so
-# missing: vendor/lib64/libsettings.so
-# missing: vendor/lib64/qtibus.so
-# missing: vendor/lib64/qtimutex.so
-
-# Secure element
-
-# missing: vendor/bin/hw/vendor.qti.secure_element@1.2-service
-# missing: vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
-# missing: vendor/lib64/android.hardware.secure_element@1.0-impl.so
-# missing: vendor/lib64/jcos_nq_client.so
-# missing: vendor/lib64/ls_nq_client.so
-# missing: vendor/lib64/se_nq_extn_client.so
-
 # Snapdragon Computer Vision Engine
 vendor/lib/libscveCommon.so
 vendor/lib/libscveCommon_stub.so
@@ -500,11 +438,6 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Subsystem Restart
 vendor/bin/ssr_setup
-
-# Thermal
-
-# missing: vendor/bin/mi_thermald
-# missing: vendor/etc/init/init.mi_thermald.rc
 
 # Thermal engine
 vendor/bin/thermal-engine
@@ -556,9 +489,6 @@ vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 vendor/bin/cnss-daemon
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
-
-# WiFi Display (system) - from marvel
-
 
 # WiFi Display (vendor)
 vendor/lib/libFileMux_proprietary.so
@@ -731,8 +661,6 @@ vendor/lib64/libpandora.algorithm.niklas.DummySnapshotAlgorithm.1.so
 vendor/lib64/libpandora.pal.platform.generic.products.so
 vendor/lib64/libpandora.render.so
 vendor/lib64/libpandora.so
-
-# Protobuf 3.9.1 kept from the stock vendor for the camera accelerator blobs
 
 # Audio calibration (ACDB)
 vendor/etc/acdbdata/adsp_avs_config.acdb

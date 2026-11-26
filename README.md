@@ -9,8 +9,6 @@ The base list is Xiaomi `sm8250-common` (kona) filtered against the stock
 images, plus the Lenovo delta: Lenovo HIDL services, CS35L45 speaker
 protection, Novatek NT36523 touch firmware, QCA6390, AW8697/RichTap haptics,
 Dolby, ArcSoft camera algorithms, CamX, SSC sensors and the IPA firmware.
-Entries from the Xiaomi list that do not exist on this device are kept in
-`proprietary-files.txt` as `# missing: <path>` comments.
 
 ## Not stock
 
@@ -36,6 +34,4 @@ Do not regenerate these with a plain `extract-files.py` run:
 | vendor / odm | Android 11, SDK 30, `ro.product.first_api_level=30` (VNDK 30) |
 | vendor security patch | `2023-06-01` |
 
-Extracted partitions: `vendor`, `odm`, `system_ext`, `product`. The `system`
-partition is not part of the extracted stock trees, so every `system/...` base
-entry is marked as missing.
+Extracted partitions: `vendor`, `odm`, `system_ext`, `product`.
